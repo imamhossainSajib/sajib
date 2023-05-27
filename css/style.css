@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    color: #fff;
+    
+}
+.service{
+    width: 1300px;
+    padding: 100px 60px;
+    margin: auto;
+}
+.service h2{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+}
+.service h2::after{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    width: 25%;
+    background-color: #fff;
+    color: #222;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0 35px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    
+}
+.box i {
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: #222;
+    color: #fff;
+    border: 2px solid orangered;
+     padding-top: 30px;
+     transition: all 0.3s ease;
+}
+   
+.box h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.box p{
+    font-size: 14px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.box a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: #222;
+}
+.card:hover .box a{
+    background-color: orangered;
+    color: #000;
+    border: 1px solid #222;
+    transition: all 0.5s ease;
+}
+.card:hover .box i{
+    background-color: orangered;
+    color: #fff;
+    border-color: #222;
+    transition: all 0.5s ease;
+}
+.card::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    transition: all 0.5s ease;
+}
+.card:hover::after{
+    transform: rotate(-10deg);
+    background-color: orangered;
+}
